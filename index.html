@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="script.js"></script> -->
+    <script type=text/javascript src="cDati.js"></script>
+    <script type=text/javascript src="cHTML.js"></script>
+
+<!-- Side Menu -->
+    <input type="checkbox" id="checkbox">
+    <label class="btn" for="checkbox"><span>Menu</span></label>
+    <div class="sidebar">
+        <ul>
+            <a href="index.html" class="active">
+                <li>Home</li>
+            </a>
+            <a href="Contact.html">
+                <li>Contatti</li>
+            </a>
+            <a href="guidelines.html">
+                <li>Istruzioni</li>
+            </a>
+            <!--<li style="font-size:20px; color:chartreuse"><h2>TEST:</h2> <br> 4x^(3)-8x^(2)-11x-3<br>x^(4)-2x^(3)+0x^(2)-8x+16<br>-2x^(5)-2x^(4)-x-1<br>x^(3)+2x-3<br>x^(5)+3x^(4)-5x^(3)-15x^(2)+4x+12 </li>-->
+
+            <div class="logo" class="logo">
+                <img src="Immagini\\Liceo.png" alt="Logo" style="background-color: white; text-align: center;" width=230 height=100%>
+                <a href="https://www.liceograssi.edu.it/"> &RightArrow; Liceo Scientifico Statale Orazio Grassi Savona</a>
+            </div>
+        </ul>
+    </div>
+
+    <title>ProgettoRuffini</title>
+    <h1>Ruffini Project</h1><br>
+    
+</head>
+<body style="background-image: url(Immagini\\G.jpg);" onload='f.HTML = new cHTML(polinomioInserito, polinomioTradotto, CronologiaBottoni, TabellaRuffini, PolinomioScompostoBase, PolinomioScomposto, zeri, "f.HTML.")'>
+    <form name=f>
+        <input type="text" id="polinomioInserito" onchange="f.HTML.Show()" value="x^(n)"><span style="vertical-align:bottom; font-size:21px; user-select:none; color:aqua"><b>&nbsp;&RightArrowLeftArrow;&nbsp;</b></span><span id="polinomioTradotto" class="VisualizzaPolinomioBox">&nbsp;x<sup>n</sup>&nbsp;</span>
+        <br><br>
+        <div id="CronologiaBottoni"></div>
+        <span id="TabellaRuffini" style="font-size:20px"></span>
+        <span id="PolinomioScompostoBase" class="VisualizzaPolinomioBox2">&nbsp;Polinomio&nbsp;</span><span style="vertical-align:bottom; font-size:29px; user-select: none; color:aqua"><b>&nbsp;&LeftRightArrow;&nbsp;</b></span><span id="PolinomioScomposto" class="VisualizzaPolinomioBox">&nbsp;Scomposto&nbsp;</span><br>
+        <span id="zeri" class="VisualizzaZeriBox"> &nbsp;Zeri del polinomio&nbsp;</span><br><br>
+        <input type="button" class="bottone" value="svuota" onclick="f.HTML.svuota()">
+        <br><br>
+    </form>
+</body>
+</html>

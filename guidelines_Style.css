@@ -1,0 +1,199 @@
+/* ------ HEAD ------ */
+h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+  background-image: linear-gradient(-225deg,
+      #008000 20%,
+      #9EF01A 40%,
+      #fff800 60%,
+      #9EF01A 80%,
+      #008000 100%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 4s linear infinite;
+  display: inline-block;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+#checkbox,
+.btn span {
+  /* Hide the checkbox input & word "Menu" in the button */
+  display: none;
+}
+
+/* Menu button */
+.btn {
+  display: block;
+  background-color: #058C42;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: width .3s ease-in-out;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #2B2E33;
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  z-index: 1111;
+  transition: transform .3s ease-in-out;
+  transform: translateX(-250px);
+}
+
+.sidebar ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.sidebar ul a {
+  position: relative;
+  text-decoration: none;
+  display: block;
+  background-color: transparent;
+  color: #BAB5BD;
+  padding: 15px 20px;
+  font-size: 15px;
+}
+
+.sidebar ul a li i {
+  margin-right: 15px;
+}
+
+/* Add the word "New" to the second item and "2" to the third item */
+.sidebar ul a:nth-child(2)::after,
+.sidebar ul a:nth-child(3)::after {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -9px;
+  color: #fff;
+  font-size: 5px;
+  padding: 0 7px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+
+.sidebar ul a:hover,
+.sidebar ul a.active {
+  background-color: #161920;
+  color: #fff;
+}
+
+.sidebar ul a:hover::before,
+.sidebar ul a.active::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background-color: #058C42;
+  width: 4px;
+  height: 100%;
+}
+
+/* Effect of showing the sidebar */
+#checkbox:checked~.sidebar {
+  transform: translateX(0);
+}
+
+#checkbox:checked+.btn {
+  width: 250px;
+  padding: 0 20px;
+}
+
+#checkbox:checked+.btn span {
+  /* Show again the word "Menu" in the button */
+  display: inline;
+}
+
+.logo {
+  position: absolute;
+  bottom: 8%;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*------ BODY ------*/
+
+body {
+  text-align: center;
+  margin: auto;
+  background-size: 100% auto;
+  font-size: 27.2px;
+  font-weight: 400;
+}
+
+.PaoloRuffini {
+  /*display: block;*/
+  width: auto;
+  height: auto;
+  border: 0;
+  margin: 0;
+  outline: 0;
+  float: left;
+  text-align: bottom left;
+  vertical-align: bottom;
+}
+
+.speak {
+  zoom: 90%;
+  background-color: white;
+  box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.12),
+    0px 6px 10px 3px rgba(0, 0, 0, 0.22),
+    0px 9px 14px 3px rgba(0, 0, 0, 0.2),
+    0px 18px 16px 6px rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  border-radius: 6px;
+}
+
+.SpeakTitle {
+  text-transform: uppercase;
+  background-image: linear-gradient(-225deg,
+      #008000 20%,
+      #058C42 40%,
+      #57cc99 60%,
+      #058C42 80%,
+      #008000 100%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 4s linear infinite;
+  display: inline-block;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
